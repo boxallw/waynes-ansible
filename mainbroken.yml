@@ -22,7 +22,10 @@
 
 
   tasks:
-  
+  - name: deploy tomcat
+    hosts: apps
+    gather_facts: false
+    become: true
 
   tasks:
   - name: copy static index.html to tomcat webapps/ansible/index.html
